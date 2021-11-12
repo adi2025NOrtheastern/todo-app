@@ -1,0 +1,266 @@
+@import 'variables';
+
+/* Set body in the center */
+body {
+  margin: auto;
+  width: 50%;
+  margin-top: 50px;
+  //height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.headingTODO {
+  margin: 5px;
+  border-radius: 20px;
+  padding: 30px;
+  
+  //height: 27px;
+}
+
+/* padding and border inside total width and height */
+* {
+  box-sizing: border-box;
+}
+
+/* Zero padding and mrgin for list */
+ul {
+  padding: 0;
+  margin: 0;
+  margin-left: 200px;
+}
+
+/* list item */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  font-size: 18px;
+  list-style-type: none;
+  background: #eee;  
+  transition: 0.2s;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/*Odd list items style */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/*ul's li on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+/* Style the crossDelete button */
+.crossDelete {
+  position: $secPostion;
+  right: 0;
+  top: 10px;
+  padding: 12px 16px 12px 16px;
+}
+
+.crossDelete:hover {
+  background-color: $bgcolor;
+  color: white;
+}
+
+/* task on complete */
+ul li.checked {
+  background: #888;
+  text-decoration: line-through;
+  color: $bordercolor;
+  
+}
+
+.myUl{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+/* pseudo before element on complete add tick right sign : creates check mark*/
+ul li.checked::before {
+  content: '';
+  position: $secPostion;
+  border-color: $bordercolor;
+  top: 25px;
+  left: 16px;
+  transform: rotate(45deg);
+  border-style: solid;
+
+  //right and bottom
+  //this will create L shape mirror like _| and transform will rotate 45 degere
+  border-width: 0 2px 2px 0;
+
+  height: 15px;
+  width: 7px;
+}
+
+#addItemDiv {
+  display: none;
+ // margin: 50px;
+ margin-left: -40px;
+}
+
+
+/* Set View details to absolute */
+.viewDetails {
+  position: $secPostion;
+  right: 30px;
+  top: 10px;
+  padding: 12px 16px 12px 16px;
+}
+
+.viewDetails:hover {
+  background-color: $bgcolor;
+  color: white;
+}
+
+
+
+/* remove header after float */
+.outerDivClass:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* forheader */
+.outerDivClass {
+  background-color: $bgcolor;
+  color: white;
+  padding: 30px 40px;
+  background-color: #157ade;
+  text-align: center;
+ //position: sticky;
+ position: fixed;
+ left: 10px;
+ max-width: 500px;
+ justify-items: center;
+ //width: 300px;
+}
+
+
+
+/*All input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 20px;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Save button */
+.saveBtn {
+  cursor: pointer;
+  width: 30%;
+  margin-left: 202px;
+  padding: 10px;
+  width: 25%;
+  background: $maincolor;
+  color: rgb(253, 253, 253);
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 10px;
+
+  background-color: #5a98b6;
+  transition: 0.3s;
+  
+  margin-top: 10px;
+  
+}
+
+.mainDiv {
+  max-height: 1000px;
+  overflow-y: visible;//auto;
+  border-radius: 50px;
+  //border-collapse: separate; 
+  margin-bottom: 350px;
+  // display: grid;
+  // //grid-template-columns: 2;
+  // grid-template-columns: auto auto;
+  // grid-template-rows: auto;
+  // grid-gap: 10px;
+  // box-sizing: border-box;
+  // width: 400px;
+  // height: 200px;
+  // margin-left: auto;
+  // margin-right: auto;
+}
+
+/* "Add" button */
+.addBtn {
+  margin-bottom: 10px;
+  cursor:wait;
+  //width: 26%;
+  //float: ;
+
+
+ // margin-left: 241px;
+  margin-top: 30px;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.3s;
+  border-radius: 0;
+  color: rgb(253, 253, 253);
+  background: $maincolor;
+  border-radius: 10px;
+
+  background-color: #70a3bc;
+}
+
+.inputElements {
+  width: 50%;
+  margin-left: 142px;
+  margin-top: 5px;
+}
+
+/* On hover change the background color of buttons */
+.addBtn:hover,
+.saveBtn:hover {
+  background-color: rgb(236, 207, 207);
+}
+
+.todoDetails {
+  display: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color:cornflowerblue;
+  //background-color: cornsilk;
+}
+
+
+.todoDetails::first-letter{
+  font-size: x-large;
+}
+
+li::first-letter{
+  font-size: xx-large;
+}
+
+.todoDetailsDiv::first-letter{
+  font-size: x-large;
+  color:rgb(44, 163, 236);
+}
+
+ul li.checked .todoDetailsDiv {
+  //background: #888;
+  //text-decoration: line-through;
+  color: #BFD641;
+  
+}
+
+.grad1 {
+ // background-color: #89b4e9;
+  background-image: linear-gradient(140deg, #EADEDB 0%, #BC70A4 50%, #BFD641 75%);
+  //background-repeat: no-repeat;
+
+}

@@ -1,0 +1,26 @@
+[
+    {
+        "id" : 1,
+        "title": "Read Book",
+        "description": "It is very important",
+        "due_date": "2 nd Nov 2021",
+        "due_time": "12:00",
+        "status" : "open"
+    },
+    {
+        "id" : 2,
+        "title": "Football match",
+        "description": "Its Chelsea",
+        "due_date": "30 th Oct 2020",
+        "due_time": "11:00",
+        "status" : "complete"
+    },
+    {
+        "id" : 3,
+        "title": "Assignment6",
+        "description": "Webpack assignment",
+        "due_date": "3 rd Nov 2020",
+        "due_time": "23:00",
+        "status" : "complete"
+    }
+]
